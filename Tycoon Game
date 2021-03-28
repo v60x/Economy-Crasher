@@ -1,0 +1,174 @@
+--https://www.roblox.com/games/6131247916/BUG-FIXED-2-PLAYER-BILLIONAIRE-TYCOON?refPageId=12f2a343-ea6b-4ee0-a00e-65efa77be506
+--Game link above incase if the teleport doesn't work
+
+local EC = Instance.new("ScreenGui")
+local Main = Instance.new("ImageButton")
+local Title = Instance.new("TextLabel")
+local Title_2 = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local GameTP = Instance.new("TextButton")
+local GameName = Instance.new("TextLabel")
+local dollar = Instance.new("TextButton")
+local million = Instance.new("TextButton")
+local Billion = Instance.new("TextButton")
+
+
+
+EC.Name = "EC"
+EC.Parent = game.CoreGui
+
+Main.Name = "Main"
+Main.Parent = EC
+Main.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Main.BackgroundTransparency = 1.000
+Main.Position = UDim2.new(0.256969661, 0, 0.35373652, 0)
+Main.Size = UDim2.new(0, 451, 0, 237)
+Main.Image = "rbxassetid://2790389767"
+Main.ImageColor3 = Color3.fromRGB(35, 35, 35)
+Main.ScaleType = Enum.ScaleType.Slice
+Main.SliceCenter = Rect.new(8, 8, 248, 248)
+Main.Active = true
+Main.Draggable = true
+
+Title.Name = "Title"
+Title.Parent = Main
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.0143737169, 0, 0, 0)
+Title.Size = UDim2.new(0, 141, 0, 55)
+Title.Font = Enum.Font.LuckiestGuy
+Title.Text = "ECONOMY"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+Title_2.Name = "Title"
+Title_2.Parent = Main
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.Position = UDim2.new(0.298096299, 0, 0.102366135, 0)
+Title_2.Size = UDim2.new(0, 147, 0, 42)
+Title_2.Font = Enum.Font.LuckiestGuy
+Title_2.Text = "CRASHER "
+Title_2.TextColor3 = Color3.fromRGB(255, 0, 0)
+Title_2.TextScaled = true
+Title_2.TextSize = 14.000
+Title_2.TextWrapped = true
+
+TextLabel.Name = ""
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0125811528, 0, 0.137654781, 0)
+TextLabel.Size = UDim2.new(0, 108, 0, 23)
+TextLabel.Font = Enum.Font.Code
+TextLabel.Text = "made by v60x"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Name = ""
+TextLabel_2.Parent = Main
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.896576524, 0, 0.0281293578, 0)
+TextLabel_2.Size = UDim2.new(0, 41, 0, 23)
+TextLabel_2.Font = Enum.Font.FredokaOne
+TextLabel_2.Text = "v3"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+GameTP.Name = "Game TP"
+GameTP.Parent = Main
+GameTP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GameTP.Position = UDim2.new(0.0259210523, 0, 0.33485508, 0)
+GameTP.Size = UDim2.new(0, 162, 0, 48)
+GameTP.Style = Enum.ButtonStyle.RobloxRoundButton
+GameTP.Font = Enum.Font.SourceSansBold
+GameTP.Text = "Teleport to Game"
+GameTP.TextColor3 = Color3.fromRGB(0, 0, 0)
+GameTP.TextSize = 25.000
+GameTP.MouseButton1Down:connect(function()
+	game:GetService("TeleportService"):Teleport(6131247916, LocalPlayer)
+end)
+
+GameName.Name = "Game Name"
+GameName.Parent = Main
+GameName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GameName.BackgroundTransparency = 1.000
+GameName.Position = UDim2.new(0.623322546, 0, 0.0253164545, 0)
+GameName.Size = UDim2.new(0, 128, 0, 60)
+GameName.Font = Enum.Font.FredokaOne
+GameName.Text = "Billionare Tycoon"
+GameName.TextColor3 = Color3.fromRGB(255, 255, 255)
+GameName.TextScaled = true
+GameName.TextSize = 14.000
+GameName.TextWrapped = true
+
+dollar.Name = "dollar"
+dollar.Parent = Main
+dollar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+dollar.Position = UDim2.new(0.0259210523, 0, 0.613336086, 0)
+dollar.Size = UDim2.new(0, 162, 0, 48)
+dollar.Style = Enum.ButtonStyle.RobloxRoundButton
+dollar.Font = Enum.Font.SourceSansBold
+dollar.Text = "$1 Spam"
+dollar.TextColor3 = Color3.fromRGB(0, 0, 0)
+dollar.TextSize = 25.000
+dollar.MouseButton1Down:connect(function()
+	while wait() do
+		local args = {
+			[1] = 1,
+		}
+
+
+		game:GetService("ReplicatedStorage").updateCollector:FireServer(unpack(args))
+	end
+end)
+
+million.Name = "million"
+million.Parent = Main
+million.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+million.Position = UDim2.new(0.571371019, 0, 0.33485508, 0)
+million.Size = UDim2.new(0, 162, 0, 48)
+million.Style = Enum.ButtonStyle.RobloxRoundButton
+million.Font = Enum.Font.SourceSansBold
+million.Text = "Million Spam"
+million.TextColor3 = Color3.fromRGB(0, 0, 0)
+million.TextSize = 25.000
+million.MouseButton1Down:connect(function()
+	while wait() do
+		local args = {
+			[1] = 1000000,
+		}
+
+
+		game:GetService("ReplicatedStorage").updateCollector:FireServer(unpack(args))
+	end
+end)
+
+Billion.Name = "Billion"
+Billion.Parent = Main
+Billion.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Billion.Position = UDim2.new(0.569153726, 0, 0.613336086, 0)
+Billion.Size = UDim2.new(0, 162, 0, 48)
+Billion.Style = Enum.ButtonStyle.RobloxRoundButton
+Billion.Font = Enum.Font.SourceSansBold
+Billion.Text = "Billion Spam"
+Billion.TextColor3 = Color3.fromRGB(0, 0, 0)
+Billion.TextSize = 25.000
+Billion.MouseButton1Down:connect(function()
+	while wait() do
+		local args = {
+			[1] = 1000000000,
+		}
+
+
+		game:GetService("ReplicatedStorage").updateCollector:FireServer(unpack(args))
+	end
+end)
