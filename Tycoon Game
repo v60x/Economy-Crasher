@@ -117,18 +117,16 @@ dollar.Position = UDim2.new(0.0259210523, 0, 0.613336086, 0)
 dollar.Size = UDim2.new(0, 162, 0, 48)
 dollar.Style = Enum.ButtonStyle.RobloxRoundButton
 dollar.Font = Enum.Font.SourceSansBold
-dollar.Text = "$1 Spam"
+dollar.Text = "$1"
 dollar.TextColor3 = Color3.fromRGB(0, 0, 0)
 dollar.TextSize = 25.000
 dollar.MouseButton1Down:connect(function()
-	while wait() do
 		local args = {
 			[1] = 1,
 		}
 
 
 		game:GetService("ReplicatedStorage").updateCollector:FireServer(unpack(args))
-	end
 end)
 
 million.Name = "million"
@@ -138,18 +136,16 @@ million.Position = UDim2.new(0.571371019, 0, 0.33485508, 0)
 million.Size = UDim2.new(0, 162, 0, 48)
 million.Style = Enum.ButtonStyle.RobloxRoundButton
 million.Font = Enum.Font.SourceSansBold
-million.Text = "Million Spam"
+million.Text = "Million"
 million.TextColor3 = Color3.fromRGB(0, 0, 0)
 million.TextSize = 25.000
 million.MouseButton1Down:connect(function()
-	while wait() do
 		local args = {
 			[1] = 1000000,
 		}
 
 
 		game:GetService("ReplicatedStorage").updateCollector:FireServer(unpack(args))
-	end
 end)
 
 Billion.Name = "Billion"
@@ -163,12 +159,10 @@ Billion.Text = "Billion Spam"
 Billion.TextColor3 = Color3.fromRGB(0, 0, 0)
 Billion.TextSize = 25.000
 Billion.MouseButton1Down:connect(function()
-	while wait() do
 		local args = {
 			[1] = 1000000000,
 		}
 
 
 		game:GetService("ReplicatedStorage").updateCollector:FireServer(unpack(args))
-	end
 end)
